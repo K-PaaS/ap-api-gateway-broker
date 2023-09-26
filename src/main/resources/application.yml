@@ -19,7 +19,7 @@ logging:
   file: LOG-FILE
   level:
     root: LOGGING-LEVEL-ROOT
-    org.paasta.servicebroker.apigateway: LOGGING-LEVEL-SERVICEBROKER-APIGATEWAY
+    org.servicebroker.apigateway: LOGGING-LEVEL-SERVICEBROKER-APIGATEWAY
     org.hibernate: LOGGING-LEVEL-HIBERNATE
 
 service:

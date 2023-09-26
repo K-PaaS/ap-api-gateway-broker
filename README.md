@@ -1,15 +1,15 @@
-# PAAS-TA-API-GATEWAY-SERVICE-BROKER
+# ap-api-gateway-broker
 
-PaaS-TA 에서 제공하는 API Gateway 서비스 브로커로 클라우드 컨트롤러와 서비스 브로커간의 v2 서비스 API를 제공합니다.
+Application Platform 에서 제공하는 API Gateway 서비스 브로커로 클라우드 컨트롤러와 서비스 브로커간의 v2 서비스 API를 제공합니다.
 API Gateway 서비스 브로커가 수행하는 API Gateway 서비스 관리 작업은 다음과 같습니다.
  
 - Catalog : API Gateway 서비스 및 서비스 Plan 정보를 조회한다.
 - Provisioning : API Gateway 서비스 인스턴스를 할당한다.
 - Deprovisioning : API Gateway 서비스 인스턴스의 할당을 해제한다.
 
-[서비스팩 개발 가이드](https://github.com/PaaS-TA/Guide-1.0-Spaghetti-/blob/master/Development-Guide/ServicePack_develope_guide.md)의 API 개발 가이드를 참고하시면 아키텍쳐와 기술, 구현과 개발에 대해 자세히 알 수 있습니다.
+[서비스팩 개발 가이드](https://github.com/K-PaaS/Guide-1.0-Spaghetti-/blob/master/Development-Guide/ServicePack_develope_guide.md)의 API 개발 가이드를 참고하시면 아키텍쳐와 기술, 구현과 개발에 대해 자세히 알 수 있습니다.
 
-# 개발 환경
+# 개발 환경e
 
 - JDK 8
 - Gradle 4.9
