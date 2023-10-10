@@ -7,7 +7,7 @@ buildscript {
         flatDir {
             dirs 'libs'
         }
-        maven { url "https://repo.spring.io/plugins-release" }
+        //maven { url "https://repo.spring.io/plugins-release" }
         mavenCentral()
     }
     dependencies {
@@ -28,7 +28,7 @@ ext {
 }
 
 jar {
-    baseName = 'paasta-api-gateway-service-broker'
+    baseName = 'ap-api-gateway-broker'
 }
 
 repositories {
@@ -36,24 +36,26 @@ repositories {
         dirs 'libs'
     }
     mavenCentral()
-    maven { url "https://repo.spring.io/plugins-release" }
+    //maven { url "https://repo.spring.io/plugins-release" }
 }
 
 dependencies {
 
-    compile files("libs/openpaas-service-java-broker.jar")
-    compile files("libs/PAAS-TA-BOSH-API.jar")
+    compile files("libs/ap-service-broker-1.0.0.1.jar")
+    compile files("libs/ap-bosh-api-1.1.0.1.jar")
 
     compile "org.springframework.boot:spring-boot-starter-data-jpa"
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.springframework.boot:spring-boot-starter-security"
+    //compile "org.springframework.boot:spring-boot-starter-jdbc"
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
 
     testCompile "org.springframework.boot:spring-boot-starter-test"
 
     compile "org.apache.commons:commons-dbcp2"
     runtime("org.mariadb.jdbc:mariadb-java-client:2.2.6")
-    compile "org.springframework:spring-jdbc:4.0.0.M3"
+    //compile "org.springframework:spring-jdbc:4.0.0.M3"
+    compile "org.springframework:spring-jdbc"
     annotationProcessor("org.projectlombok:lombok")
     compileOnly("org.projectlombok:lombok:1.16.16")
     compile "org.apache.commons:commons-lang3:3.0"
@@ -83,5 +85,5 @@ test {
 }
 
 springBoot {
-    mainClass = "org.paasta.servicebroker.apigateway.config.ApiGatewayBroker"
+    mainClass = "org.servicebroker.apigateway.config.ApiGatewayBroker"
 }
